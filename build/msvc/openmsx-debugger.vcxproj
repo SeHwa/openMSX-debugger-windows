@@ -148,6 +148,7 @@
     </ResourceCompile>
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/std:c++17 %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Full</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -172,6 +173,7 @@
   <ItemGroup>
     <ClCompile Include="$(OpenMSXSrcDir)\BitMapViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\BreakpointDialog.cpp" />
+    <ClCompile Include="$(OpenMSXSrcDir)\BreakpointViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\CommClient.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\ConnectDialog.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\Convert.cpp" />
@@ -197,6 +199,7 @@
     <ClCompile Include="$(OpenMSXSrcDir)\MainMemoryViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_BitMapViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_BreakpointDialog.cpp" />
+    <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_BreakpointViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_CommClient.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_ConnectDialog.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_CPURegsViewer.cpp" />
@@ -214,43 +217,57 @@
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_InteractiveLabel.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_MainMemoryViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_OpenMSXConnection.cpp" />
+    <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_PaletteDialog.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_PreferencesDialog.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_Settings.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_SlotViewer.cpp" />
+    <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_SpriteViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_StackViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_SymbolManager.cpp" />
+    <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_TileViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_VDPCommandRegViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_VDPDataStore.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_VDPRegViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_VDPStatusRegViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_VramBitMappedView.cpp" />
+    <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_VramSpriteView.cpp" />
+    <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_VramTiledView.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\OpenMSXConnection.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\openmsx\QAbstractSocketStreamWrapper.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\openmsx\SspiNegotiateClient.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\openmsx\SspiUtils.cpp" />
+    <ClCompile Include="$(OpenMSXSrcDir)\PaletteDialog.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\PreferencesDialog.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\qrc\qrc_resources.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\Settings.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\SimpleHexRequest.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\SlotViewer.cpp" />
+    <ClCompile Include="$(OpenMSXSrcDir)\SpriteViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\StackViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\SymbolManager.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\SymbolTable.cpp" />
+    <ClCompile Include="$(OpenMSXSrcDir)\TileViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\VDPCommandRegViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\VDPDataStore.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\VDPRegViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\VDPStatusRegViewer.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\Version.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\VramBitMappedView.cpp" />
+    <ClCompile Include="$(OpenMSXSrcDir)\VramSpriteView.cpp" />
+    <ClCompile Include="$(OpenMSXSrcDir)\VramTiledView.cpp" />
     <ClCompile Include="$(OpenMSXSrcDir)\moc\moc_SymbolTable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(OpenMSXSrcDir)\ui\ui_BitMapViewer.h" />
     <ClInclude Include="$(OpenMSXSrcDir)\ui\ui_BreakpointDialog.h" />
+    <ClInclude Include="$(OpenMSXSrcDir)\ui\ui_BreakpointViewer.h" />
     <ClInclude Include="$(OpenMSXSrcDir)\ui\ui_ConnectDialog.h" />
     <ClInclude Include="$(OpenMSXSrcDir)\ui\ui_GotoDialog.h" />
+    <ClInclude Include="$(OpenMSXSrcDir)\ui\ui_PaletteDialog.h" />
     <ClInclude Include="$(OpenMSXSrcDir)\ui\ui_PreferencesDialog.h" />
+    <ClInclude Include="$(OpenMSXSrcDir)\ui\ui_SpriteViewer.h" />
     <ClInclude Include="$(OpenMSXSrcDir)\ui\ui_SymbolManager.h" />
+    <ClInclude Include="$(OpenMSXSrcDir)\ui\ui_TileViewer.h" />
     <ClInclude Include="$(OpenMSXSrcDir)\ui\ui_VDPCommandRegisters.h" />
     <ClInclude Include="$(OpenMSXSrcDir)\ui\ui_VDPRegistersExplained.h" />
     <ClInclude Include="$(OpenMSXSrcDir)\ui\ui_VDPStatusRegisters.h" />
@@ -305,6 +322,32 @@ if not exist "$(MocOutDir)" (md "$(MocOutDir)")
 </Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_%(Filename).cpp...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(OpenMSXSrcDir)\BreakpointViewer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
     </CustomBuild>
     <CustomBuild Include="$(OpenMSXSrcDir)\CommClient.h">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp...</Message>
@@ -884,6 +927,32 @@ if not exist "$(MocOutDir)" (md "$(MocOutDir)")
     <ClInclude Include="$(OpenMSXSrcDir)\openmsx\QAbstractSocketStreamWrapper.h" />
     <ClInclude Include="$(OpenMSXSrcDir)\openmsx\SspiNegotiateClient.h" />
     <ClInclude Include="$(OpenMSXSrcDir)\openmsx\SspiUtils.h" />
+    <CustomBuild Include="$(OpenMSXSrcDir)\PaletteDialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+    </CustomBuild>
     <CustomBuild Include="$(OpenMSXSrcDir)\PreferencesDialog.h">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">@rem copy %0 foo.bat
 if not exist "$(MocOutDir)" (md "$(MocOutDir)")
@@ -963,6 +1032,32 @@ if not exist "$(MocOutDir)" (md "$(MocOutDir)")
 "$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
 </Command>
     </CustomBuild>
+    <CustomBuild Include="$(OpenMSXSrcDir)\SpriteViewer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+    </CustomBuild>
     <CustomBuild Include="$(OpenMSXSrcDir)\StackViewer.h">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp...</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_%(Filename).cpp...</Message>
@@ -1039,6 +1134,32 @@ if not exist "$(MocOutDir)" (md "$(MocOutDir)")
 if not exist "$(MocOutDir)" (md "$(MocOutDir)")
 "$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
 </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(OpenMSXSrcDir)\TileViewer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_%(Filename).cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_%(Filename).cpp...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
     </CustomBuild>
     <CustomBuild Include="$(OpenMSXSrcDir)\VDPCommandRegViewer.h">
@@ -1145,39 +1266,57 @@ if not exist "$(MocOutDir)" (md "$(MocOutDir)")
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
     </CustomBuild>
-    <CustomBuild Include="$(OpenMSXSrcDir)\Version.h">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating config headers...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Version.ii</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating config headers...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Version.ii</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating config headers...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Version.ii</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating config headers...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Version.ii</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">for /f "delims=" %%d in ("$(OpenMSXConfigDir)") do set CONFIG_DIR=%%~fd
-rem echo CONFIG_DIR=%CONFIG_DIR%
-
-set PYTHONPATH=%PYTHONPATH%;$(OpenMSXRootDir)\build
-python "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%"
+    <CustomBuild Include="$(OpenMSXSrcDir)\VramSpriteView.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_%(Filename).cpp...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_%(Filename).cpp...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_%(Filename).cpp...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
 </Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">for /f "delims=" %%d in ("$(OpenMSXConfigDir)") do set CONFIG_DIR=%%~fd
-rem echo CONFIG_DIR=%CONFIG_DIR%
-
-set PYTHONPATH=%PYTHONPATH%;$(OpenMSXRootDir)\build
-python "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%"
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
 </Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">for /f "delims=" %%d in ("$(OpenMSXConfigDir)") do set CONFIG_DIR=%%~fd
-rem echo CONFIG_DIR=%CONFIG_DIR%
-
-set PYTHONPATH=%PYTHONPATH%;$(OpenMSXRootDir)\build
-python "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%"
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
 </Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">for /f "delims=" %%d in ("$(OpenMSXConfigDir)") do set CONFIG_DIR=%%~fd
-rem echo CONFIG_DIR=%CONFIG_DIR%
-
-set PYTHONPATH=%PYTHONPATH%;$(OpenMSXRootDir)\build
-python "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%"
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
 </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(OpenMSXSrcDir)\VramTiledView.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_%(Filename).cpp...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_%(Filename).cpp...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_%(Filename).cpp...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">@rem copy %0 foo.bat
+if not exist "$(MocOutDir)" (md "$(MocOutDir)")
+"$(LibQtToolsDir)\moc.exe" "%(FullPath)" -o "$(MocOutDir)\moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(MocOutDir)\moc_%(Filename).cpp</Outputs>
     </CustomBuild>
     <CustomBuild Include="$(OpenMSXSrcDir)\VramBitMappedView.h">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp...</Message>
@@ -1266,7 +1405,51 @@ if not exist "$(MocOutDir)" (md "$(MocOutDir)")
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
     </CustomBuild>
+    <CustomBuild Include="$(OpenMSXSrcDir)\BreakpointViewer.ui">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_%(Filename).h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_%(Filename).h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating ui_%(Filename).h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating ui_%(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+    </CustomBuild>
     <CustomBuild Include="$(OpenMSXSrcDir)\ConnectDialog.ui">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_%(Filename).h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_%(Filename).h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating ui_%(Filename).h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating ui_%(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(OpenMSXSrcDir)\PaletteDialog.ui">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
 "$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
 </Command>
@@ -1332,7 +1515,51 @@ if not exist "$(MocOutDir)" (md "$(MocOutDir)")
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
     </CustomBuild>
+    <CustomBuild Include="$(OpenMSXSrcDir)\SpriteViewer.ui">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_%(Filename).h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_%(Filename).h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating ui_%(Filename).h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating ui_%(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+    </CustomBuild>
     <CustomBuild Include="$(OpenMSXSrcDir)\SymbolManager.ui">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
+"$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_%(Filename).h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_%(Filename).h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating ui_%(Filename).h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating ui_%(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(OpenMSXSrcDir)\TileViewer.ui">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if not exist "$(UiOutDir)" (md "$(UiOutDir)")
 "$(LibQtToolsDir)\uic.exe" -o "$(UiOutDir)\ui_%(Filename).h" "%(FullPath)"
 </Command>
@@ -1419,6 +1646,44 @@ if not exist "$(MocOutDir)" (md "$(MocOutDir)")
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(UiOutDir)\ui_%(Filename).h</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(UiOutDir)\ui_%(Filename).h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(OpenMSXSrcDir)\Version.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating config headers...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Version.ii</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating config headers...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Version.ii</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating config headers...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Version.ii</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating config headers...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Version.ii</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">for /f "delims=" %%d in ("$(OpenMSXConfigDir)") do set CONFIG_DIR=%%~fd
+rem echo CONFIG_DIR=%CONFIG_DIR%
+
+set PYTHONPATH=%PYTHONPATH%;$(OpenMSXRootDir)\build
+python3 "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%
+"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">for /f "delims=" %%d in ("$(OpenMSXConfigDir)") do set CONFIG_DIR=%%~fd
+rem echo CONFIG_DIR=%CONFIG_DIR%
+
+set PYTHONPATH=%PYTHONPATH%;$(OpenMSXRootDir)\build
+python3 "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%
+"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">for /f "delims=" %%d in ("$(OpenMSXConfigDir)") do set CONFIG_DIR=%%~fd
+rem echo CONFIG_DIR=%CONFIG_DIR%
+
+set PYTHONPATH=%PYTHONPATH%;$(OpenMSXRootDir)\build
+python3 "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%
+"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">for /f "delims=" %%d in ("$(OpenMSXConfigDir)") do set CONFIG_DIR=%%~fd
+rem echo CONFIG_DIR=%CONFIG_DIR%
+
+set PYTHONPATH=%PYTHONPATH%;$(OpenMSXRootDir)\build
+python3 "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%
+"
+</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

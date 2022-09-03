@@ -15,9 +15,9 @@
     <MocOutDir>$(OpenMSXSrcDir)\moc</MocOutDir>
     <UiOutDir>$(OpenMSXSrcDir)\ui</UiOutDir>
     <QrcOutDir>$(OpenMSXSrcDir)\qrc</QrcOutDir>
-    <LibQtName>Qt5.7.0</LibQtName>
-    <LibQtDir Condition="'$(Platform)' == 'Win32'">$(ThirdPartySrcDir)\$(LibQtName)\5.7\msvc2015</LibQtDir>
-    <LibQtDir Condition="'$(Platform)' == 'x64'">$(ThirdPartySrcDir)\$(LibQtName)\5.7\msvc2015_64</LibQtDir>
+    <LibQtName>Qt5.15.2</LibQtName>
+    <LibQtDir Condition="'$(Platform)' == 'Win32'">$(ThirdPartySrcDir)\$(LibQtName)\5.15.2\msvc2019</LibQtDir>
+    <LibQtDir Condition="'$(Platform)' == 'x64'">$(ThirdPartySrcDir)\$(LibQtName)\5.15.2\msvc2019_64</LibQtDir>
     <LibQtIncludeDir>$(LibQtDir)\include</LibQtIncludeDir>
     <LibQtLibDir>$(LibQtDir)\lib</LibQtLibDir>
     <LibQtToolsDir>$(LibQtDir)\bin</LibQtToolsDir>
