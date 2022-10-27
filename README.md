@@ -7,7 +7,7 @@
 
 3. Download the latest Qt online installer from [here](https://download.qt.io/archive/online_installers/).
 
-4. Install Qt version 5.12.2 in the directory derived\3rdparty\src\Qt5.12.2.<br>
+4. Install Qt version 5.15.2 in the directory derived\3rdparty\src\Qt5.15.2.<br>
 (If you change some variables in the openmsx-debugger.props file, you can set it to different Qt version and directory name)
 
 5. Run the x64 Command Prompt of Visual Studio 2019.
