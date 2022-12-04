@@ -1660,29 +1660,25 @@ if not exist "$(MocOutDir)" (md "$(MocOutDir)")
 rem echo CONFIG_DIR=%CONFIG_DIR%
 
 set PYTHONPATH=%PYTHONPATH%;$(OpenMSXRootDir)\build
-python3 "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%
-"
+python3 "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%"
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">for /f "delims=" %%d in ("$(OpenMSXConfigDir)") do set CONFIG_DIR=%%~fd
 rem echo CONFIG_DIR=%CONFIG_DIR%
 
 set PYTHONPATH=%PYTHONPATH%;$(OpenMSXRootDir)\build
-python3 "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%
-"
+python3 "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%"
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">for /f "delims=" %%d in ("$(OpenMSXConfigDir)") do set CONFIG_DIR=%%~fd
 rem echo CONFIG_DIR=%CONFIG_DIR%
 
 set PYTHONPATH=%PYTHONPATH%;$(OpenMSXRootDir)\build
-python3 "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%
-"
+python3 "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%"
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">for /f "delims=" %%d in ("$(OpenMSXConfigDir)") do set CONFIG_DIR=%%~fd
 rem echo CONFIG_DIR=%CONFIG_DIR%
 
 set PYTHONPATH=%PYTHONPATH%;$(OpenMSXRootDir)\build
-python3 "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%
-"
+python3 "$(OpenMSXRootDir)\build\msvc\\genconfig.py" $(PlatformName) "$(ConfigurationName)" "%CONFIG_DIR%"
 </Command>
     </CustomBuild>
   </ItemGroup>
